@@ -7,7 +7,7 @@ function myFunction() {
     menu.style.display = "none";
   }
 }
-
+ /* Base de datos */
 var data = {
   'AQP': {
     '2016-2': {
@@ -5141,4 +5141,88 @@ var data = {
   }
 };
 
-console.log(data['AQP']['2016-2']['students'[0]]);
+
+
+
+function AQP2016II() {
+  var studentAqpPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['AQP']['2016-2']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentAqpPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled Arequipa 2016-II */
+
+  var targetAqpPrimeraGen = document.getElementById('achievement-number'); /* Elemento en HTML */
+  var targetNumber
+}
+
+function AQP2017I() {
+  var studentAqpSegundaGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['AQP']['2017-1']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentAqpSegundaGen.innerText = studentNumberSum; /* Students currently enrolled Arequipa 2017-I */
+}
+
+function CDMX2017I() {
+  var studentCdmxPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['CDMX']['2017-1']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentCdmxPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled CDMX 2017-I */
+}
+
+function CDMX2017II() {
+  var studentCdmxSegundaGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['CDMX']['2017-2']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentCdmxSegundaGen.innerText = studentNumberSum; /* Students currently enrolled CDMX 2017-II */
+}
+
+function LIM2016I() {
+  var studentLimPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['LIM']['2016-2']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentLimPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled Lima 2016-II */
+}
+
+function LIM2017I() {
+  var studentLimSegundaGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['LIM']['2017-1']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentLimSegundaGen.innerText = studentNumberSum; /* Students currently enrolled Lima 2017-I */
+}
+
+function LIM2017II() {
+  var studentLimTerceraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['LIM']['2017-2']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentLimTerceraGen.innerText = studentNumberSum; /* Students currently enrolled Lima 2017-II */
+}
+
+function SCL2016II() {
+  var studentSclPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['SCL']['2016-2']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentSclPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled Santiago de Chile 2016-II */
+}
+
+function SCL2017I() {
+  var studentSclSegundaGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['SCL']['2017-1']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentSclSegundaGen.innerText = studentNumberSum; /* Students currently enrolled Santiago de Chile 2017-I */
+}
+
+function SCL2017II() {
+  var studentSclTerceraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
+  var studentNumber = data['SCL']['2017-2']['students']; /* Entrando a la data */
+  var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+
+  studentSclTerceraGen.innerText = studentNumberSum; /* Students currently enrolled Santiago de Chile 2017-II */
+}
