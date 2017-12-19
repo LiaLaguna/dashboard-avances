@@ -7,7 +7,7 @@ function myFunction() {
     menu.style.display = "none";
   }
 }
-/*
+
 var data = {
   'AQP': {
     '2016-2': {
@@ -5141,4 +5141,4 @@ var data = {
   }
 };
 
-var studentsAQP =*/
+console.log(data['AQP']['2016-2']['students'[0]]);
