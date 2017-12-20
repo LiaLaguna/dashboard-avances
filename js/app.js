@@ -5194,6 +5194,37 @@ function AQP2017I() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentAqpSegundaGen.innerText = studentNumberSum; /* Students currently enrolled Arequipa 2017-I */
+
+  var dropoutAqpSegundaGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutAqpSegundaGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['AQP']['2017-1']['ratings'];
+  var sprints = data['AQP']['2017-1']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
 }
 
 function CDMX2017I() {
@@ -5205,6 +5236,37 @@ function CDMX2017I() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentCdmxPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled CDMX 2017-I */
+
+  var dropoutCdmxPrimeraGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutCdmxPrimeraGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['CDMX']['2017-1']['ratings'];
+  var sprints = data['CDMX']['2017-1']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
 }
 
 function CDMX2017II() {
@@ -5216,6 +5278,38 @@ function CDMX2017II() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentCdmxSegundaGen.innerText = studentNumberSum; /* Students currently enrolled CDMX 2017-II */
+
+  var dropoutCdmxSegundaGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutCdmxSegundaGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['CDMX']['2017-2']['ratings'];
+  var sprints = data['CDMX']['2017-2']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
+
 }
 
 function LIM2016II() {
@@ -5227,6 +5321,38 @@ function LIM2016II() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentLimPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled Lima 2016-II */
+
+  var dropoutLimPrimeraGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutLimPrimeraGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['LIM']['2016-2']['ratings'];
+  var sprints = data['LIM']['2016-2']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
+
 }
 
 function LIM2017I() {
@@ -5238,6 +5364,38 @@ function LIM2017I() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentLimSegundaGen.innerText = studentNumberSum; /* Students currently enrolled Lima 2017-I */
+
+  var dropoutLimSegundaGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutLimSegundaGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['LIM']['2017-1']['ratings'];
+  var sprints = data['AQP']['2017-1']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
+
 }
 
 function LIM2017II() {
@@ -5249,6 +5407,38 @@ function LIM2017II() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentLimTerceraGen.innerText = studentNumberSum; /* Students currently enrolled Lima 2017-II */
+
+  var dropoutLimTerceraGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutLimTerceraGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['LIM']['2017-2']['ratings'];
+  var sprints = data['LIM']['2017-2']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
+
 }
 
 function SCL2016II() {
@@ -5260,6 +5450,38 @@ function SCL2016II() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentSclPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled Santiago de Chile 2016-II */
+
+  var dropoutSclPrimeraGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutSclPrimeraGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['SCL']['2016-2']['ratings'];
+  var sprints = data['SCL']['2016-2']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
+
 }
 
 function SCL2017I() {
@@ -5271,6 +5493,38 @@ function SCL2017I() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentSclSegundaGen.innerText = studentNumberSum; /* Students currently enrolled Santiago de Chile 2017-I */
+
+  var dropoutSclSegundaGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutSclSegundaGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['AQP']['2016-2']['ratings'];
+  var sprints = data['AQP']['2016-2']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
+
 }
 
 function SCL2017II() {
@@ -5282,4 +5536,36 @@ function SCL2017II() {
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
 
   studentSclTerceraGen.innerText = studentNumberSum; /* Students currently enrolled Santiago de Chile 2017-II */
+
+  var dropoutSclTerceraGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutSclTerceraGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
+
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var rating = data['AQP']['2016-2']['ratings'];
+  var sprints = data['AQP']['2016-2']['ratings'].length;
+  var promedioTeacher = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
+  }
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
+
 }

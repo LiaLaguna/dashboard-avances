@@ -85,8 +85,34 @@ span > a:active {
 
 .menu > img { /* Logo menú global */
   height: 250px;
-  margin-left: 427px;
+  margin-left: 43%;
   margin-top: -80px;
+}
+
+.notifications {
+  float: right;
+}
+
+.notifications > img {
+  height: 22px;
+  margin-right: 20px;
+}
+
+.tm-cropper { /* Imagen de perfil de Training Manager */
+  width: 50px;
+  height: 50px;
+  float: right;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: -15px;
+  margin-right: 40px;
+}
+
+.tm-cropper > img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
 }
 
 .dropdown {
@@ -179,7 +205,7 @@ span > a:active {
   text-decoration: none;
 }
 
-/* Section estudiantes */
+/* VIEW STUDENTS */
 .students-container{
   width: 100%;
   height: 2027px;
@@ -199,10 +225,11 @@ span > a:active {
   width: 100px;
   height: 100px;
   position: relative;
+  display: inline-block;
   overflow: hidden;
   border-radius: 50%;
-  margin-top: -320px;
-  margin-left: 70px;
+  margin-top: 3%;
+  margin-left: 4%;
 }
 
 .image-cropper > img {
@@ -217,11 +244,108 @@ span > a:active {
   font-weight: 700;
   color: #2b2b2b;
   margin-top: -103px;
-  margin-left: 200px;
+  margin-left: 170px;
 }
 
 .tech-skills{
-  margin-left: 202px;
+  margin-left: 170px;
+}
+
+.life-skills{
+  margin-left: 20px;
+}
+
+.tech-skills,
+.life-skills {
+  float: left;
+  background-color: #f7f7f7;
+  width: 15%;
+  height: 62px;
+  text-align: center;
+}
+
+.tech-skills > .number {
+  display: inline-block;
+  margin-top: 5px;
+  color: #ffc107;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.life-skills > .number {
+  display: inline-block;
+  margin-top: 5px;
+  color: #5f9ae2;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tech-skills > p,
+.life-skills > p {
+  color: #2b2b2b;
+  font-size: 9px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.tech-skills > .info,
+.life-skills > .info  {
+  margin-top: 5px;
+}
+
+.student-graph {
+  margin-left: 44px;
+  margin-top: 105px;
+}
+
+.student-graph > img {
+  height: 160px;
+}
+
+/* VIEW STUDENTS */
+.teachers-container{
+  width: 100%;
+  height: 2027px;
+  background: linear-gradient(-90deg, #ffffff, #ebeef3);
+}
+
+.teachers-container > .teacher-info {
+  width: 90%;
+  height: 337px;
+  background: white;
+  margin-left: 5%;
+  margin-top: 5%;
+  box-shadow: 10px 10px 20px #acacac;
+}
+
+.image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+.image-cropper > img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.teacher-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-top: -103px;
+  margin-left: 170px;
+}
+
+.tech-skills{
+  margin-left: 170px;
 }
 
 .life-skills{
