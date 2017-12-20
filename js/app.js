@@ -5140,20 +5140,13 @@ var data = {
     }
   }
 };
-/*
-var arr = data['AQP']['2016-2']['ratings'];
-var sprints = data['AQP']['2016-2']['ratings'].length;
-var promedio = 0;
-var sum = 0;
-for (var i = 0; i < arr.length; i++){
-  sum += arr[i]['teacher']
-  promedio = sum /sprints
 
-}
-console.log(promedio.toFixed(1));*/
 
 
 function AQP2016II() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'AREQUIPA 2016-II ' + '▾'; /* Cambiando nombre de sede */
+
   var studentAqpPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['AQP']['2016-2']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5171,19 +5164,31 @@ function AQP2016II() {
   dropoutAqpPrimeraGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
 
   var teacherOverallRating = document.getElementById('teacherRating-number');
-  var teacherRating = data['AQP']['2016-2']['ratings'];
+  var rating = data['AQP']['2016-2']['ratings'];
   var sprints = data['AQP']['2016-2']['ratings'].length;
-  var promedio = 0;
+  var promedioTeacher = 0;
   var sum = 0;
-  for (var i = 0; i < teacherRating.length; i++){
-    sum += teacherRating[i]['teacher']
-    promedio = sum /sprints
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['teacher']
+    promedioTeacher = sum / sprints
   }
-  teacherOverallRating.innerText = promedio.toFixed(1);
+  teacherOverallRating.innerText = promedioTeacher.toFixed(1); /* Overall Teacher Rating */
+
+  var jediOverallRating = document.getElementById('jediRating-number');
+  var promedioJedi = 0;
+  var sum = 0;
+  for (var i = 0; i < rating.length; i++){
+    sum += rating[i]['jedi']
+    promedioJedi = sum / sprints
+  }
+  jediOverallRating.innerText = promedioJedi.toFixed(1); /* Overall Jedi Rating */
 
 }
 
 function AQP2017I() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'AREQUIPA 2017-I ' + '▾'; /* Cambiando nombre de sede */
+
   var studentAqpSegundaGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['AQP']['2017-1']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5192,6 +5197,9 @@ function AQP2017I() {
 }
 
 function CDMX2017I() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'CIUDAD DE MÉXICO 2017-I ' + '▾'; /* Cambiando nombre de sede */
+
   var studentCdmxPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['CDMX']['2017-1']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5200,6 +5208,9 @@ function CDMX2017I() {
 }
 
 function CDMX2017II() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'CIUDAD DE MÉXICO 2017-II ' + '▾'; /* Cambiando nombre de sede */
+
   var studentCdmxSegundaGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['CDMX']['2017-2']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5207,7 +5218,10 @@ function CDMX2017II() {
   studentCdmxSegundaGen.innerText = studentNumberSum; /* Students currently enrolled CDMX 2017-II */
 }
 
-function LIM2016I() {
+function LIM2016II() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'LIMA 2016-II ' + '▾'; /* Cambiando nombre de sede */
+
   var studentLimPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['LIM']['2016-2']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5216,6 +5230,9 @@ function LIM2016I() {
 }
 
 function LIM2017I() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'LIMA 2017-I ' + '▾'; /* Cambiando nombre de sede */
+
   var studentLimSegundaGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['LIM']['2017-1']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5224,6 +5241,9 @@ function LIM2017I() {
 }
 
 function LIM2017II() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'LIMA 2017-II ' + '▾'; /* Cambiando nombre de sede */
+
   var studentLimTerceraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['LIM']['2017-2']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5232,6 +5252,9 @@ function LIM2017II() {
 }
 
 function SCL2016II() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'SANTIAGO DE CHILE 2016-II ' + '▾'; /* Cambiando nombre de sede */
+
   var studentSclPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['SCL']['2016-2']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5240,6 +5263,9 @@ function SCL2016II() {
 }
 
 function SCL2017I() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'SANTIAGO DE CHILE 2017-I ' + '▾'; /* Cambiando nombre de sede */
+
   var studentSclSegundaGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['SCL']['2017-1']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
@@ -5248,6 +5274,9 @@ function SCL2017I() {
 }
 
 function SCL2017II() {
+  var sedeName = document.getElementById('sede');
+  sedeName.innerText = 'SANTIAGO DE CHILE 2017-II ' + '▾'; /* Cambiando nombre de sede */
+
   var studentSclTerceraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['SCL']['2017-2']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */

@@ -5,13 +5,13 @@
     <title>Estudiantes Laboratoria</title>
     <link rel="stylesheet" href="../css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../assets/icon/favicon.png"/>
   </head>
   <body>
 
     <header class="menu">
       <img src="../assets/images/logo-laboratoria-blanco.svg" alt="Laboratoria logo">
-      <p class="dropdown" onclick="myFunction()">SEDE
-        <img src="../assets/icon/down-chevron.png" alt="Ícono">
+      <p class="dropdown" onclick="myFunction()" id="sede">SEDE ▾
       </p>
       <div id="myDropdown" class="dropdown-content">
           <ul>
@@ -136,7 +136,7 @@
       <section class="jedi-rating">
         <p class="title">JEDI MASTER RATING</p>
         <div class="cumulative">
-          <p class="number">50</p>
+          <p class="number" id="jediRating-number">50</p>
           <p class="info">OVERALL JEDI RATING</p>
           <p>(CUMULATIVE)</p>
         </div>

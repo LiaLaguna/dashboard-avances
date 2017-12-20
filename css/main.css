@@ -534,10 +534,6 @@ span > a:active {
   font-weight: 700;
 }
 
-.jedi-rating > .cumulative > .number {
-  color: #ffc107;
-}
-
 .cumulative > p {
   color: #2b2b2b;
   font-size: 9px;
