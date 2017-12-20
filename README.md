@@ -71,7 +71,7 @@ El diseño es simple y sencillo a la vista del usuario, permitiendo que se compr
 <img src=assets/images/maquetados/overview-coment.png>
 
 
-### __Students__ ###
+### __Students-Teachers__ ###
 <img src=assets/images/maquetados/students-detalles.jpg>
 
 > ## Diseño final ##
@@ -81,3 +81,6 @@ El diseño es simple y sencillo a la vista del usuario, permitiendo que se compr
 
 ### __Students__ ###
 <img src=assets/images/maquetados/students.jpg>
+
+### __Teachers__ ###
+<img src=assets/images/maquetados/teachers.jpg>
