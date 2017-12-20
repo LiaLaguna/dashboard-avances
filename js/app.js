@@ -5140,19 +5140,47 @@ var data = {
     }
   }
 };
+/*
+var arr = data['AQP']['2016-2']['ratings'];
+var sprints = data['AQP']['2016-2']['ratings'].length;
+var promedio = 0;
+var sum = 0;
+for (var i = 0; i < arr.length; i++){
+  sum += arr[i]['teacher']
+  promedio = sum /sprints
 
-
+}
+console.log(promedio.toFixed(1));*/
 
 
 function AQP2016II() {
   var studentAqpPrimeraGen = document.getElementById('enrolled-number'); /* Elemento en HTML */
   var studentNumber = data['AQP']['2016-2']['students']; /* Entrando a la data */
   var studentNumberSum = studentNumber.length; /* Obteniendo número de estudiantes */
+  studentAqpPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled */
 
-  studentAqpPrimeraGen.innerText = studentNumberSum; /* Students currently enrolled Arequipa 2016-II */
+  var dropoutAqpPrimeraGen = document.getElementById('dropout-number'); /* Elemento en HTML */
+  var count = 0;
+  var dropout = 0;
+  for (var i = 0; i < studentNumber.length; i++){
+    if (studentNumber[i]['active'] === false){
+      count++
+      dropout = (100 / studentNumber.length) * count
+    }
+  }
+  dropoutAqpPrimeraGen.innerText = parseInt(dropout) + '%'; /* % Dropout */
 
-  var targetAqpPrimeraGen = document.getElementById('achievement-number'); /* Elemento en HTML */
-  var targetNumber
+  var teacherOverallRating = document.getElementById('teacherRating-number');
+  var teacherRating = data['AQP']['2016-2']['ratings'];
+  var sprints = data['AQP']['2016-2']['ratings'].length;
+  var promedio = 0;
+  var sum = 0;
+  for (var i = 0; i < teacherRating.length; i++){
+    sum += teacherRating[i]['teacher']
+    promedio = sum /sprints
+  }
+  teacherOverallRating.innerText = promedio.toFixed(1);
+
 }
 
 function AQP2017I() {
